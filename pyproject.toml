@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "asoscope-cli"
+version = "1.0.0"
+description = "Zero-dependency, cross-platform App Store intelligence CLI (public iTunes Search API + public RSS; no login, no private API, no IPA download)."
+readme = { file = "README.md", content-type = "text/markdown; charset=UTF-8" }
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "gitstq" }]
+keywords = [
+    "app-store",
+    "itunes-search-api",
+    "app-store-optimization",
+    "aso",
+    "cli",
+    "reviews",
+    "charts",
+    "zero-dependency",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet",
+    "Topic :: Utilities",
+]
+dependencies = []
+
+[project.scripts]
+asoscope = "asoscope.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/gitstq/asoscope"
+Repository = "https://github.com/gitstq/asoscope"
+Issues = "https://github.com/gitstq/asoscope/issues"
+Changelog = "https://github.com/gitstq/asoscope/blob/main/CHANGELOG.md"
+
+[tool.setuptools]
+packages = ["asoscope"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

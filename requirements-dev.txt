@@ -1,0 +1,4 @@
+# Optional development-only tools. The test suite itself uses the
+# standard-library unittest module and needs none of these.
+pytest>=7.0
+build>=1.0

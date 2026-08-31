@@ -1,0 +1,7 @@
+# asoscope has ZERO third-party runtime dependencies.
+# It runs on the Python 3.8+ standard library alone, so this file is
+# intentionally empty. Install Python itself (3.8+) and you are ready.
+#
+# Development/testing also needs nothing beyond the stdlib (unittest ships
+# with Python). If you prefer pytest, it is optional and listed in
+# requirements-dev.txt.
