@@ -6,8 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [1.0.0] - 2026-08-31
 
-### Added
-- `search`: multi-storefront app search with genre, price, minimum-rating
+### Added- `search`: multi-storefront app search with genre, price, minimum-rating
   filters and relevance / rating / rating-count / name ordering.
 - `lookup`: full app metadata by numeric track id or bundle id.
 - `reviews`: public customer-review fetching (recent / helpful) with an
@@ -25,3 +24,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - On-disk TTL response cache, bounded retries with exponential backoff.
 - Full `unittest` suite using captured Apple response fixtures (no
   network required to run tests).
+
+### Fixed
+- Robust chart parsing for storefronts whose RSS returns `link` as a
+  list and places the readable price label on the `im:price` node itself
+  (observed on the German storefront), so URL and price never render
+  blank.

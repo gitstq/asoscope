@@ -8,7 +8,7 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](../LICENSE)
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-zero-success.svg)](#-設計理念與迭代規劃)
 [![Platforms](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)](#-環境需求)
-[![Tests](https://img.shields.io/badge/tests-53%20passed-success.svg)](#-執行測試)
+[![Tests](https://img.shields.io/badge/tests-54%20passed-success.svg)](#-執行測試)
 
 **🌐 語言：[简体中文](../README.md) · 繁體中文 · [English](README.en.md)**
 
@@ -53,7 +53,7 @@
 - 👀 **本地觀察清單 + 快照差異** —— `watch` 子指令把應用程式加入本機清單，重複快照後自動比對版本號、價格、平均評分、評價數、安裝包大小、發版日期的變化；**資料只會留在你的電腦上**。
 - 🧮 **四種匯出格式** —— 對齊的終端機表格（**具備中日韓全形字元寬度感知，絕不錯位**）、JSON、CSV、Markdown，以 `-o` 隨意存檔，可直接銜接 Excel／BI／CI。
 - 🧰 **零第三方執行階段相依** —— 僅用 Python 標準函式庫；內建 TTL 磁碟快取、指數退避重試與明確的結束碼，達到工程級穩健度。
-- 🧪 **可離線執行的完整測試** —— 53 個單元測試以真實擷取並去敏感化的端點夾具執行，跑測試完全不需要連網。
+- 🧪 **可離線執行的完整測試** —— 54 個單元測試以真實擷取並去敏感化的端點夾具執行，跑測試完全不需要連網。
 
 ---
 

@@ -216,19 +216,36 @@ class ChartEntry:
         icon_url = ""
         if isinstance(images, list) and images:
             icon_url = _str(images[-1].get("label"))
+        # Some storefronts return a single link dict, others a list of
+        # links (alternate html + image enclosure); prefer the html one.
         link = entry.get("link") or {}
-        url = _str((link.get("attributes") or {}).get("href")) if isinstance(link, dict) else ""
+        url = ""
+        if isinstance(link, dict):
+            url = _str((link.get("attributes") or {}).get("href"))
+        elif isinstance(link, list):
+            for item in link:
+                attrs = item.get("attributes") or {}
+                if attrs.get("rel") == "alternate" or attrs.get("type") == "text/html":
+                    url = _str(attrs.get("href"))
+                    break
+            if not url and link:
+                url = _str(((link[0] or {}).get("attributes") or {}).get("href"))
         category = ""
         cat_node = entry.get("category") or {}
         if isinstance(cat_node, dict):
             category = _str((cat_node.get("attributes") or {}).get("label"))
+        price_node = entry.get("im:price") or {}
+        price_attrs = price_node.get("attributes") or {} if isinstance(price_node, dict) else {}
+        price_label = _str(price_attrs.get("label")) or (
+            _str(price_node.get("label")) if isinstance(price_node, dict) else ""
+        )
         return cls(
             rank=rank,
             track_id=track_id,
             track_name=label("im:name"),
             developer=label("im:artist"),
             category=category,
-            price_label=_str(((entry.get("im:price") or {}).get("attributes") or {}).get("label")),
+            price_label=price_label,
             release_date=label("im:releaseDate"),
             url=url,
             icon_url=icon_url,

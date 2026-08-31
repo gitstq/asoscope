@@ -62,6 +62,30 @@ class ChartModelTests(unittest.TestCase):
         self.assertTrue(rows[0].track_name)
         self.assertTrue(all(r.rank >= 1 for r in rows))
 
+    def test_list_link_and_toplevel_price_variant(self):
+        # Some storefronts (e.g. German feed) return link as a list and put
+        # the human-readable price label on the node itself.
+        entry = {
+            "im:name": {"label": "Demo"},
+            "im:artist": {"label": "Maker"},
+            "id": {"label": "https://apps.apple.com/de/app/demo/id123",
+                   "attributes": {"im:id": "123"}},
+            "link": [
+                {"attributes": {"rel": "enclosure", "type": "image/jpeg",
+                                "href": "https://img.example/x.jpg"}},
+                {"attributes": {"rel": "alternate", "type": "text/html",
+                                "href": "https://apps.apple.com/de/app/demo/id123"}},
+            ],
+            "im:price": {"label": "Laden",
+                         "attributes": {"amount": "0.00", "currency": "EUR"}},
+            "category": {"attributes": {"label": "Produktivität"}},
+        }
+        row = ChartEntry.from_entry(entry, 1)
+        self.assertEqual(row.track_id, 123)
+        self.assertEqual(row.url, "https://apps.apple.com/de/app/demo/id123")
+        self.assertEqual(row.price_label, "Laden")
+        self.assertEqual(row.category, "Produktivität")
+
 
 if __name__ == "__main__":
     unittest.main()

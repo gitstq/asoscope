@@ -8,7 +8,7 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-zero-success.svg)](#-设计思路与迭代规划)
 [![Platforms](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)](#-环境要求)
-[![Tests](https://img.shields.io/badge/tests-53%20passed-success.svg)](#-运行测试)
+[![Tests](https://img.shields.io/badge/tests-54%20passed-success.svg)](#-运行测试)
 
 **🌐 语言 / Languages：简体中文 · [繁體中文](docs/README.zh-TW.md) · [English](docs/README.en.md)**
 
@@ -53,7 +53,7 @@
 - 👀 **本地观察清单 + 快照 Diff** —— `watch` 子命令把应用加入本地清单，反复快照后自动比对版本号、价格、均分、评分数、包体大小、发版日期的变化；**数据只保存在本机**。
 - 🧮 **四种导出格式** —— 对齐终端表格（**中日韩全角字符宽度感知，不会错位**）、JSON、CSV、Markdown，`-o` 任意落盘，可直接接入 Excel / BI / CI。
 - 🧰 **零三方运行时依赖** —— 仅用 Python 标准库；自带 TTL 磁盘缓存、指数退避重试、确定性退出码，工程级健壮性。
-- 🧪 **离线可跑的完整测试** —— 53 个单元测试基于真实抓取并脱敏的接口夹具，运行测试全程不需要联网。
+- 🧪 **离线可跑的完整测试** —— 54 个单元测试基于真实抓取并脱敏的接口夹具，运行测试全程不需要联网。
 
 ---
 

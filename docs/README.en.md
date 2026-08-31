@@ -8,7 +8,7 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](../LICENSE)
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-zero-success.svg)](#-design-philosophy--roadmap)
 [![Platforms](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)](#-requirements)
-[![Tests](https://img.shields.io/badge/tests-53%20passed-success.svg)](#-running-the-tests)
+[![Tests](https://img.shields.io/badge/tests-54%20passed-success.svg)](#-running-the-tests)
 
 **🌐 Languages: [简体中文](../README.md) · [繁體中文](README.zh-TW.md) · English**
 
@@ -53,7 +53,7 @@ The product idea was inspired by [majd/ipatool](https://github.com/majd/ipatool)
 - 👀 **Local watchlist + snapshot diffs** — `watch` tracks apps locally; repeated snapshots detect changes in version, price, average rating, rating count, binary size and release date. **Everything stays on your machine.**
 - 🧮 **Four export formats** — aligned terminal tables (**CJK/full-width-width aware, so Japanese and Chinese names never misalign**), JSON, CSV and Markdown; write anywhere with `-o` for Excel, BI or CI pipelines.
 - 🧰 **Zero third-party runtime dependencies** — Python stdlib only, with a TTL disk cache, exponential-backoff retries and deterministic process exit codes.
-- 🧪 **Fully offline test suite** — 53 unit tests run against real, captured and trimmed endpoint fixtures; no network required to test.
+- 🧪 **Fully offline test suite** — 54 unit tests run against real, captured and trimmed endpoint fixtures; no network required to test.
 
 ---
 
